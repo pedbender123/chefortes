@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pedro-churras:
+    build: .
+    ports:
+      - "2100:80"
+    container_name: pedro_churras_site
+    restart: always
