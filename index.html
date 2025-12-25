@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef Pedro Fortes | Arte do Fogo</title>
-    <meta name="description" content="Chef Pedro Fortes - Especialista em churrasco e eventos em Lisboa. Do Piauí para o mundo, a arte de cozinhar com fogo.">
-    
+    <meta name="description"
+        content="Chef Pedro Fortes - Especialista em churrasco e eventos em Lisboa. Do Piauí para o mundo, a arte de cozinhar com fogo.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="cursor-glow"></div>
 
@@ -26,7 +31,7 @@
         <div class="logo">PF</div>
         <div class="nav-links">
             <a href="#home">Início</a>
-            <a href="#about">O Chef</a>
+            <a href="#timeline">Minha História</a>
             <a href="#gallery">Galeria</a>
             <a href="#contact" class="btn-nav">Contato</a>
         </div>
@@ -50,34 +55,66 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="about section-padding">
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section section-padding">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image reveal-left">
-                    <img src="uploaded_img1.jpg" alt="Chef Pedro Fortes sorrindo">
-                    <div class="border-accent"></div>
+            <h2 class="section-title center-text reveal-up">Minha Jornada</h2>
+            <div class="timeline-container" id="timeline-container">
+                <!-- Timeline items will be injected here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section id="specialties" class="specialties-section section-padding">
+        <div class="container">
+            <h2 class="section-title center-text reveal-up">Especialidades</h2>
+            <div class="specialties-grid reveal-up delay-1">
+                <!-- Specialties will be populated by JS or static HTML -->
+                <div class="specialty-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Churrasco Brasileiro</h3>
                 </div>
-                <div class="about-text reveal-right">
-                    <h2 class="section-title">A Alma do Fogo</h2>
-                    <p class="highlight-text">"O churrasco não é apenas comida, é um ritual de celebração."</p>
-                    <p>Natural do Piauí, Brasil, e hoje a conquistar paladares em Lisboa, o Chef Pedro Fortes traz em sua bagagem a autenticidade do fogo de chão e a sofisticação da gastronomia contemporânea.</p>
-                    <p>Especialista em cortes nobres e técnicas de defumação, Pedro transforma eventos comuns em experiências gastronômicas memoráveis. Seja um evento privado, corporativo ou uma celebração íntima, o domínio das brasas é garantido.</p>
-                    
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">Eventos Realizados</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">PT</span>
-                            <span class="stat-label">Lisboa & Região</span>
-                        </div>
-                    </div>
+                <div class="specialty-card">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h3>American BBQ</h3>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-flag"></i>
+                    <h3>Culinária Nordestina</h3>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Parrilla</h3>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-hamburger"></i>
+                    <h3>Hambúrguer Artesanal</h3>
+                </div>
+                <div class="specialty-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Defumação</h3>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Event Detail Modal -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title">Título do Evento</h2>
+                <span id="modal-date" class="modal-date">Data</span>
+                <p id="modal-description">Descrição detalhada...</p>
+                <div class="modal-actions">
+                    <a href="#" id="modal-whatsapp" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Saber Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Parallax Image Section -->
     <div class="parallax-section">
@@ -133,16 +170,18 @@
             <div class="contact-card reveal-up">
                 <h2 class="section-title">Vamos Criar Algo Incrível?</h2>
                 <p>Entre em contato para orçamentos, dúvidas ou para agendar o seu próximo evento exclusivo.</p>
-                
+
                 <div class="contact-buttons">
-                    <a href="https://api.whatsapp.com/send?phone=351910556946&text=Oi%20Pedro%20tudo%20bem%3F%20Me%20interessei%20pelo%20seu%20trabalho!&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAO4_p9leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafHSiM-OHAnZKjLggAhR8NDNtmwTfZWgCQ0_esTFrTqGkIx5JcawNlMPJtxJw_aem_wXGpWQV2e8vFKG1hhrnJ0g" target="_blank" class="btn btn-whatsapp">
+                    <a href="https://api.whatsapp.com/send?phone=351910556946&text=Oi%20Pedro%20tudo%20bem%3F%20Me%20interessei%20pelo%20seu%20trabalho!&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAO4_p9leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafHSiM-OHAnZKjLggAhR8NDNtmwTfZWgCQ0_esTFrTqGkIx5JcawNlMPJtxJw_aem_wXGpWQV2e8vFKG1hhrnJ0g"
+                        target="_blank" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i> Falar no WhatsApp
                     </a>
-                    <a href="https://www.instagram.com/chefpedrofortes?igsh=MW1iYWJrZW9vbWxsZg==" target="_blank" class="btn btn-instagram">
+                    <a href="https://www.instagram.com/chefpedrofortes?igsh=MW1iYWJrZW9vbWxsZg==" target="_blank"
+                        class="btn btn-instagram">
                         <i class="fab fa-instagram"></i> Seguir no Instagram
                     </a>
                 </div>
-                
+
                 <div class="location-info">
                     <p><i class="fas fa-map-marker-alt"></i> Lisboa, Portugal</p>
                     <p class="small-note">*Disponível para deslocações sob consulta</p>
@@ -157,7 +196,8 @@
             <div class="footer-content">
                 <p>&copy; 2024 Chef Pedro Fortes. Todos os direitos reservados.</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/chefpedrofortes?igsh=MW1iYWJrZW9vbWxsZg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/chefpedrofortes?igsh=MW1iYWJrZW9vbWxsZg==" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -165,4 +205,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
